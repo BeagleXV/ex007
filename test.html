@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country</title>
+</head>
+<body>
+    <h1>Where are you from?</h1>
+    <strong>Country:</strong> <input type="text" name="txtc" id="txtc">
+    <input type="button" value="Search" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar(){
+        var txtcn = document.querySelector('input#txtc')
+        var res = document.querySelector('div#res')
+        var pais = (txtcn.value)
+        res.innerHTML = `<p>If you born in <strong>${pais}</strong></p>`
+        if (pais == 'EUA'){
+            res.innerHTML += `<p>You are american.</p>`
+        }else{
+            res.innerHTML += `<p>You are foreigner.</p>`
+        }
+
+        }
+
+    </script>
+</body>
+</html>
